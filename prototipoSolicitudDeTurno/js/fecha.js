@@ -57,22 +57,33 @@ $(function() {
         },
     });
 });
-especialidad.addEventListener(
-    "input",
+
+$(especialidad).on("click", function(event) {
+    especialidadElegida = especialidad.value
+
+});
+
+/*especialidad.addEventListener(
+    "click",
     function() {
         especialidadElegida = especialidad.value
     },
     false
-)
-hora.addEventListener(
-    "input",
+)*/
+$(hora).on("input", function(event) {
+    horaElegida = hora.value;
+    console.log("esto es coca");
+
+});
+/*hora.addEventListener(
+    "click",
     function() {
         //valueSpan.innerText = hora.value;
         //console.log(hora.value)
         horaElegida = hora.value;
     },
     false
-);
+);*/
 
 const boton = document.querySelector("#botonConfirmar");
 
