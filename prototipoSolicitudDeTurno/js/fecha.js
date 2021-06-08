@@ -4,7 +4,7 @@ var horariosDisponibles;
 var arregloTest;
 var especialidadElegida;
 
-$(function () {
+$(function() {
     // An array of dates
     var eventDates = [];
     eventDates[new Date("06/08/2021")] = new Date("06/08/2021");
@@ -29,7 +29,7 @@ $(function () {
     $.datepicker.setDefaults($.datepicker.regional["es"]);
     // datepicker
     $("#datepicker").datepicker({
-        onSelect: function (date) {
+        onSelect: function(date) {
             parrafoCalendario.innerHTML = " ";
             parrafoSubmit.innerHTML = "";
             var encontrado = false;
@@ -47,7 +47,7 @@ $(function () {
                 fechaElegida = "";
             }
         },
-        beforeShowDay: function (date) {
+        beforeShowDay: function(date) {
             var highlight = eventDates[date];
             if (highlight) {
                 return [true, "event", "Tooltip text"];
@@ -58,14 +58,15 @@ $(function () {
     });
 });
 especialidad.addEventListener(
-    "input", function(){
-    especialidadElegida = especialidad.value
+    "click",
+    function() {
+        especialidadElegida = especialidad.value
     },
     false
 )
 hora.addEventListener(
-    "input",
-    function () {
+    "click",
+    function() {
         //valueSpan.innerText = hora.value;
         //console.log(hora.value)
         horaElegida = hora.value;
@@ -75,10 +76,10 @@ hora.addEventListener(
 
 const boton = document.querySelector("#botonConfirmar");
 
-boton.addEventListener("click", function (evento) {
+boton.addEventListener("click", function(evento) {
     evento.preventDefault();
 
-    
+
     parrafoSubmit.innerHTML = " ";
 
     let turnoExitoso = false;
@@ -91,20 +92,19 @@ boton.addEventListener("click", function (evento) {
             }
         }
     }
-    if (fechaElegida == undefined || horaElegida == undefined || especialidadElegida == "value1" || especialidadElegida == undefined){
-        console.log(fechaElegida+"1")
-        console.log(horaElegida +"2")
-        console.log(especialidadElegida +" 3")
+    if (fechaElegida == undefined || horaElegida == undefined || especialidadElegida == "value1" || especialidadElegida == undefined) {
+        console.log(fechaElegida + "1")
+        console.log(horaElegida + "2")
+        console.log(especialidadElegida + " 3")
         parrafoSubmit.innerHTML = "Completar todos los campos"
-    }
-    else{
+    } else {
         if (turnoExitoso) {
-        
+
             parrafoSubmit.innerHTML = "Turno solicitado exitosamente";
-            
+
         } else {
             parrafoSubmit.innerHTML = "Horario no disponible";
         }
     }
-    
+
 });
