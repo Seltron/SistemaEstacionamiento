@@ -63,27 +63,13 @@ $(especialidad).on("click", function(event) {
 
 });
 
-/*especialidad.addEventListener(
-    "click",
-    function() {
-        especialidadElegida = especialidad.value
-    },
-    false
-)*/
+
 $(inputHora).on("input", function(event) {
     horaElegida = inputHora.value;
     console.log("esto es coca");
 
 });
-/*hora.addEventListener(
-    "click",
-    function() {
-        //valueSpan.innerText = hora.value;
-        //console.log(hora.value)
-        horaElegida = hora.value;
-    },
-    false
-);*/
+
 
 const boton = document.querySelector("#botonConfirmar");
 
