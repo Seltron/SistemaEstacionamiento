@@ -1,0 +1,181 @@
+:root {
+    --colorTextos: #FF9900
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+form {
+    background: white;
+    padding: 100px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: gray;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: -20px;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: var(--colorTextos);
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    top: -20px;
+}
+
+@media screen and (max-width:500px) {
+    form {
+        width: 80%;
+    }
+}
+
+.warnings {
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    color: var(--colorTextos);
+    padding-top: 10px;
+}
+
+.mainBtn {
+    border-radius: 7%;
+    margin-inline: 20px;
+}
+
+#mainBtnDiv {
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    top: 5px;
+}
+
+#buttonLink {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px auto;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    color: blue;
+}
+
+#loginMedicoForm,
+#loginPacienteForm {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    height: 500px;
+}
+
+#mensajeMail {
+    border-radius: 5%;
+    width: 20rem;
+    height: 20rem;
+    background-color: aqua;
+    visibility: hidden;
+    z-index: 2;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}

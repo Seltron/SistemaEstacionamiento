@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/estilost.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="jquery.ui.datepicker-es.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo">Solicitud de turnos</h1>
+        <div class="contenedor">
+            <h2 class="seleccionar"> Especialidad
+                <select name="select" id="especialidad">
+					<option value="value1" select>Seleccione especialidad</option>
+					<option value="Alergología" >Alergología</option>
+					<option value="Angiología"> Angiología</option>
+					<option value="Cardiología"> Cardiología</option>
+					<option value="Endocrinología"> Endocrinología</option>
+					<option value="Estomatología"> Estomatología</option>
+					<option value="Gastroenterología"> Gastroenterología</option>
+					<option value="Geriatría"> Geriatría</option>
+					<option value="Hematología"> Hematología</option>
+					<option value="Hepatología"> Hepatología</option>
+					<option value="Infectología"> Infectología</option>
+					<option value="Medicina del trabajo"> Medicina del trabajo</option>
+					<option value="Nefrología"> Nefrología</option>
+					<option value="Neumología"> Neumología</option>
+					<option value="Neurología"> Neurología</option>
+					<option value="Nutriología"> Nutriología</option>
+					<option value="Oncología"> Oncología</option>
+					<option value="Médicina Oncología radioterápica"> Médicina Oncología radioterápica</option>
+					<option value="Pediatría"> Pediatría</option>
+					<option value="Psiquiatría"> Psiquiatría</option>
+					<option value="Reumatología"> Reumatología</option>
+					<option value="Toxicología"> Toxicología</option>
+					<option value="Cirugías estéticas"> Cirugías estéticas</option>				
+				</select>
+            </h2>
+        </div>
+        <div class="contenedor">
+
+            <h3 class=s eleccionarFecha> Seleccione fecha:
+                <div id="datepicker"></div>
+            </h3>
+            <p class="warnings" id="warningsHorario"></p>
+        </div>
+        <div class="contenedor">
+            <h4 class=s eleccionarHorario> Seleccione horario:
+                <form action="" name="formulario" id="form">
+                    <input type="time" name="hora" value="00:00" max="18:00" min="08:00" step="600" id="hora">
+            </h4>
+            <p class="warnings" id="warningsFecha"></p>
+        </div>
+        <button type="submit" id="botonConfirmar"> Confirmar turno </button>
+        </form>
+
+        <script src="js/doms.js"></script>
+        <script src="js/fecha.js"></script>
+    </header>
+</body>
+
+</html>

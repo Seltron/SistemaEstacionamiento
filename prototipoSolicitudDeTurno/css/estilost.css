@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+
+body {
+    font-family: 'Open Sans';
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+
+/* Fuente titulo principal */
+h1{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1.5px;
+	font-size: 40px;
+	color: #fff;
+	
+}
+/* fuente de los titulos */
+h2,h3,h4{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing:1.5px;
+}
+
+.contenedor{
+	display: flex;
+	justify-content: space-between;
+}
+
+.event a {
+    background-color: #5FBA7D !important;
+    color: #ffffff !important;
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#warningsFecha{
+    margin-top: 100px;
+    	justify-content: center;
+
+    
+}
