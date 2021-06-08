@@ -58,14 +58,14 @@ $(function() {
     });
 });
 especialidad.addEventListener(
-    "click",
+    "input",
     function() {
         especialidadElegida = especialidad.value
     },
     false
 )
 hora.addEventListener(
-    "click",
+    "input",
     function() {
         //valueSpan.innerText = hora.value;
         //console.log(hora.value)
