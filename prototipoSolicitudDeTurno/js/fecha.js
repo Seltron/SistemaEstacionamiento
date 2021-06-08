@@ -70,8 +70,8 @@ $(especialidad).on("click", function(event) {
     },
     false
 )*/
-$(hora).on("input", function(event) {
-    horaElegida = hora.value;
+$(inputHora).on("input", function(event) {
+    horaElegida = inputHora.value;
     console.log("esto es coca");
 
 });
